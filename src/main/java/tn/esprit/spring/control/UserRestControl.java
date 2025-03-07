@@ -14,16 +14,18 @@ import tn.esprit.spring.services.IUserService;
 @RequestMapping("/user")
 public class UserRestControl {
 
-	@Autowired 
-	IUserService userService; 
+	private final IUserService userService;  // Declare the service as a final field
 
-	
-	// URL : http://localhost:????/????/????/retrieve-all-users
-	@GetMapping("/retrieve-all-users")
-	public List<User> retrieveAllUsers() {
-		return userService.retrieveAllUsers();
-		//return list;
-	}
+    // Constructor injection
+    public UserRestControl(IUserService userService) {
+        this.userService = userService;
+    }
+
+    // URL: http://localhost:????/????/????/retrieve-all-users
+    @GetMapping("/retrieve-all-users")
+    public List<User> retrieveAllUsers() {
+        return userService.retrieveAllUsers();
+    }
  
 	// http://localhost:????/timesheet-devops/retrieve-user/{user-id}
 	@GetMapping("/retrieve-user/{user-id}")
