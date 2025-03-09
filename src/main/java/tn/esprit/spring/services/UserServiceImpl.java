@@ -1,9 +1,6 @@
 package tn.esprit.spring.services;
 
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +14,6 @@ public class UserServiceImpl implements IUserService {
 	UserRepository userRepository;
 
 
-
-	private static final Logger l = LogManager.getLogger(UserServiceImpl.class);
 
 	@Override
 	public List<User> retrieveAllUsers() { 
@@ -48,7 +43,6 @@ public class UserServiceImpl implements IUserService {
 	public User updateUser(User u) {
 
 		User userUpdated = null; 
-		User u_saved = null; 
 
 		
 		try {
@@ -89,7 +83,4 @@ public class UserServiceImpl implements IUserService {
 		return u;
 	}
 
-	
-	
-	
 }
