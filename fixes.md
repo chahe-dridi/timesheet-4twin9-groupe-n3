@@ -20,7 +20,7 @@
     - `UserRepository.java` (lines 4, 5)
     - `UserServiceImplMockTests.java` (line 4)
     - `UserServiceImplTest.java` (lines 4, 7)
-    - `UserServiceImpl.java` (lines 5, 6)
+    - `UserServiceImpl.java` (lines 5, 6g)
 - **Description**: Removed unnecessary imports that were not used in these files to improve code cleanliness.
 
 ## Fix 2: Removed commented-out code 
