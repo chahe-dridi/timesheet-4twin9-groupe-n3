@@ -2,5 +2,5 @@ projectKey=timesheet
 serverUrl=http://localhost:9000
 serverVersion=25.3.0.104237
 dashboardUrl=http://localhost:9000/dashboard?id=timesheet
-ceTaskId=3a40d4eb-353a-4683-8f66-fed54f563858
-ceTaskUrl=http://localhost:9000/api/ce/task?id=3a40d4eb-353a-4683-8f66-fed54f563858
+ceTaskId=ee2b42b1-5119-4d40-b615-e9f4149879e5
+ceTaskUrl=http://localhost:9000/api/ce/task?id=ee2b42b1-5119-4d40-b615-e9f4149879e5

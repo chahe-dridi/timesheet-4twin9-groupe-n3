@@ -1,5 +1,6 @@
 package tn.esprit.spring.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,28 +17,24 @@ public class UserServiceImpl implements IUserService {
 
 
 	@Override
-	public List<User> retrieveAllUsers() { 
-
-		return null;
+	public List<User> retrieveAllUsers() {
+		return new ArrayList<>(); // Retourne une liste vide au lieu de null
 	}
+
 
 
 	@Override
 	public User addUser(User u) {
-
-		User utilisateur = null; 
-
+		User utilisateur = null; // Variable temporaire inutile
 		try {
-			// TODO Log à ajouter en début de la méthode 
-			utilisateur = userRepository.save(u); 
-			// TODO Log à ajouter à la fin de la méthode 
-
+			// Ajouter l'utilisateur
+			utilisateur = userRepository.save(u); // Si tu utilises un repository JPA
 		} catch (Exception e) {
-			// TODO log ici : l....("error in addUser() : " + e);
+			// Gérer l'exception si nécessaire
 		}
-
-		return utilisateur; 
+		return utilisateur; // Retourner l'utilisateur ajouté
 	}
+
 
 	@Override 
 	public User updateUser(User u) {
